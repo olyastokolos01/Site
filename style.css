@@ -1,0 +1,52 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.filters select {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.generate-btn {
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: #cfc8b8;
+    cursor: pointer;
+}
+
+.quote-images img {
+    width: 100px;
+    margin: 10px;
+    display: inline-block;
+}
