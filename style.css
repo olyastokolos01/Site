@@ -1,30 +1,39 @@
 body {
-    font-family: 'Georgia', serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #f8f8f8;
     color: #333;
-    text-align: center;
+    text-align: left;
     margin: 0;
     padding: 0;
 }
 
 .content {
-    max-width: 800px;
-    margin: 50px auto;
+    max-width: 500px;
+    margin: 25px;
     padding: 20px;
+    font-family: Big+Shoulders, sans-serif;
 }
 
 h1 {
     font-size: 32px;
+    
+    max-width: 500px;
+    font-family: Big+Shoulders, sans-serif;
+      
 }
 
 h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    
+    max-width: 500px;
+    font-family: Big+Shoulders, sans-serif;
 }
 
 p {
     font-size: 18px;
     line-height: 1.5;
+    max-width: 500px;
 }
 
 .filters select {
@@ -34,6 +43,7 @@ p {
     margin: 10px auto;
     padding: 8px;
     font-size: 16px;
+    text-align: left;
 }
 
 .generate-btn {
@@ -45,8 +55,43 @@ p {
     cursor: pointer;
 }
 
-.quote-images img {
+.photo1 {
     width: 100px;
     margin: 10px;
     display: inline-block;
+}
+.photo2 {
+    position: relative;
+    width: 50%;
+    height: 400px; /* Задай висоту контейнера */
+    margin-left: auto; /* Щоб контент був справа */
+}
+
+.photo3 {
+    position: absolute;
+    width: 150px; /* Задай потрібний розмір */
+    transition: transform 0.3s ease-in-out;
+}
+
+.img1 {
+    top: 20px;
+    right: 50px;
+    transform: rotate(-5deg);
+}
+
+.img2 {
+    top: 100px;
+    right: 150px;
+    transform: rotate(8deg);
+}
+
+.img3 {
+    top: 200px;
+    right: 80px;
+    transform: rotate(-3deg);
+}
+
+/* Додаємо ефект при наведенні */
+.quote-img:hover {
+    transform: scale(1.05);
 }
