@@ -215,3 +215,62 @@ button {
 button:hover {
     background-color: #c3b094;
 }
+
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 20px auto;
+    gap: 10px;
+}
+
+.filters label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.filters select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.quote-generator {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.quote-generator .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quote-generate-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.generate-btn {
+    width: 100%;
+    padding: 10px;
+}

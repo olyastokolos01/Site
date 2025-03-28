@@ -1,38 +1,56 @@
-const quotes = [
-    {
-        text: "Успіх — це здатність крокувати від однієї невдачі до іншої, не втрачаючи ентузіазму.",
-        author: "Вінстон Черчилль"
+const quotes = {
+    motivation: {
+        uk: ["«Єдиний спосіб робити велику роботу — любити те, що ви робите.» - Стів Джобс"],
+        en: ["“The only way to do great work is to love what you do.” - Steve Jobs"]
     },
-    {
-        text: "Успіх — це здатність крокувати від однієї невдачі до іншої, не втрачаючи ентузіазму.",
-        author: "Olya"
+    success: {
+        uk: ["«Успіх — це рух від невдачі до невдачі без втрати ентузіазму.» - Вінстон Черчилль"],
+        en: ["“Success is going from failure to failure without losing enthusiasm.” - Winston Churchill"]
     },
-  {
-        text: "Успіх — це круто",
-        author: "Святік Cool"
-    },
-    {
-        text: "Найкращий спосіб передбачити майбутнє — створити його.",
-        author: "Пітер Друкер"
-    },
-    {
-        text: "Єдиний спосіб робити велику роботу — любити те, що ви робите.",
-        author: "Стів Джобс"
-    },
-    {
-        text: "Життя — це те, що з тобою відбувається, поки ти будуєш інші плани.",
-        author: "Джон Леннон"
-    },
-    {
-        text: "Найкращий час посадити дерево був 20 років тому. Другий найкращий час — сьогодні.",
-        author: "Китайське прислів'я"
+    life: {
+        uk: ["«Життя – це те, що з тобою відбувається, поки ти будуєш інші плани.» - Джон Леннон"],
+        en: ["“Life is what happens when you’re busy making other plans.” - John Lennon"]
     }
-];
+};
 
+// Очікуємо завантаження сторінки
+document.addEventListener("DOMContentLoaded", function() {
+    const generateBtn = document.querySelector(".generate-btn");
+    
+    if (generateBtn) {
+        generateBtn.addEventListener("click", generateQuote);
+    } else {
+        console.error("Кнопка .generate-btn не знайдена!");
+    }
+});
+
+// Функція генерації цитати
 function generateQuote() {
-const randomIndex = Math.floor(Math.random() * quotes.length);
-const quote = quotes[randomIndex];
-document.getElementById('quote').innerHTML = `"${quote.text}" - ${quote.author}`;
-}
+    const category = document.getElementById("category").value;
+    const language = document.getElementById("language").value;
+    const quoteBox = document.getElementById("quote");
+    let selectedQuotes = [];
 
-window.onload = generateQuote;
+    // Якщо вибрана категорія "Всі", збираємо всі цитати
+    if (category === "all") {
+        Object.keys(quotes).forEach(key => {
+            if (quotes[key][language]) {
+                selectedQuotes = selectedQuotes.concat(quotes[key][language]);
+            }
+        });
+    } else {
+        if (quotes[category] && quotes[category][language]) {
+            selectedQuotes = quotes[category][language];
+        }
+    }
+
+    // Перевіряємо, чи є взагалі цитати
+    if (selectedQuotes.length === 0) {
+        quoteBox.textContent = "Цитати не знайдено!";
+        return;
+    }
+
+    // Вибираємо випадкову цитату
+    const randomQuote = selectedQuotes[Math.floor(Math.random() * selectedQuotes.length)];
+    quoteBox.textContent = randomQuote;
+}
