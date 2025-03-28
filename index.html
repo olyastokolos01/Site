@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <div class="container-logo">     <img class="logo" src="logo.jpg" alt="">
+        <div class="container-logo">     <img class="logo" src="./img/logo.jpg" alt="">
      </div>
      <div class="nav">
          <a href="">Про нас</a>
@@ -34,26 +34,37 @@
     </p>
 
     </div>
+   
+        <div class="quote-generator">
+            <div class="filters">
+                <label for="category">Категорія:</label>
+                <select id="category">
+                    <option value="all">Всі</option>
+                    <option value="motivation">Мотивація</option>
+                    <option value="success">Успіх</option>
+                    <option value="life">Життя</option>
+                </select>
 
-    <div class="filters">
-        <select><option>Виберіть категорію</option></select>
-        <select><option>Мова</option></select>
-        <select><option>Цитати з передбаченням</option></select>
-        <select><option>Інформація про авторів</option></select>
-    </div>
+                <label for="language">Мова:</label>
+                <select id="language">
+                    <option value="uk">Українська</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
 
-    <div class="container">
-        <div class="quote-box" id="quote">Згенеруй свою цитату</div>
-        <button onclick="generateQuote()" class="generate-btn">Згенерувати</button>
+            <div class="container">
+                <div class="quote-box" id="quote">Згенеруй свою цитату</div>
+            </div>
+            <button class="generate-btn">Згенерувати</button>
+        </div>
     </div>
-</div>
 
     <div class="quote-images">
         <h3>Quote of the day</h3>
 
-        <img class = "img1"src="photo1.jpg" alt="Your only limit is your mind">
-        <img class = "img2" src="photo2.jpg" alt="Enjoy the little things">
-        <img class = "img3" src="photo3.jpg" alt="Ikigai">
+        <img class = "img1"src="./img/photo1.jpg" alt="Your only limit is your mind">
+        <img class = "img2" src="./img/photo2.jpg" alt="Enjoy the little things">
+        <img class = "img3" src="./img/photo3.jpg" alt="Ikigai">
     </div>
 </main>
     <footer>
