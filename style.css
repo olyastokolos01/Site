@@ -7,6 +7,8 @@ body {
     padding: 0;
 }
 
+
+
 main {
     margin: 25px;
     margin:0 auto;
@@ -42,8 +44,8 @@ p {
     display: block;
     width: 100%;
     max-width: 300px;
-    margin: 10px auto;
-    padding: 8px;
+    margin: 50px;
+    padding: 7px;
     font-size: 16px;
     text-align: left;
 }
@@ -57,12 +59,13 @@ p {
     cursor: pointer;
 }
 
+
 .img1 {
 
     position: relative;
     left: 100px;
-    width: 255px;
-    height: 255px;
+    width: 350px;
+    height: 350px;
     
     
     }
@@ -107,7 +110,7 @@ header {
 }
 
 .container-logo .logo {
-    width: 60px;
+    width: 140px;
     height: auto;
     margin-right: 20px;
     border-radius: 50%;
@@ -117,6 +120,7 @@ header {
 .nav {
     display: flex;
     gap: 40px;
+    
 }
 
 .nav a {
@@ -215,6 +219,7 @@ button {
 button:hover {
     background-color: #c3b094;
 }
+
 
 
 .filters {
