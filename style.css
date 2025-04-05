@@ -6,6 +6,23 @@ body {
     margin: 0;
     padding: 0;
 }
+@font-face {
+    font-family: 'KyivType Serif';
+    src: url('path/to/KyivTypeSerif-Regular.woff2') format('woff2'),
+         url('path/to/KyivTypeSerif-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KyivType Serif';
+    src: url('path/to/KyivTypeSerif-Bold.woff2') format('woff2'),
+         url('path/to/KyivTypeSerif-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 
@@ -22,7 +39,7 @@ h1 {
     font-size: 32px;
     
     max-width: 500px;
-    font-family: Big+Shoulders, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       
 }
 
@@ -31,11 +48,13 @@ h2 {
     margin-bottom: 10px;
     
     max-width: 500px;
-    font-family: Big+Shoulders, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+
 p {
-    font-size: 18px;
+    font-family: 'KyivType Serif', serif;
+    font-size: 20px;
     line-height: 1.5;
     max-width: 500px;
 }
@@ -44,7 +63,7 @@ p {
     display: block;
     width: 100%;
     max-width: 300px;
-    margin: 50px;
+    margin: 30px;
     padding: 7px;
     font-size: 16px;
     text-align: left;
@@ -66,25 +85,22 @@ p {
     left: 100px;
     width: 350px;
     height: 350px;
-    
-    
     }
     
     .img2 {
     position: relative;
     width: 190px;
     height: 297px;
-    
-    
-    
+    left:50px;
+    top: 40px;
     }
     
     .img3 {
     position: relative;
-    width: 149px;
-    height: 223px;
-    
-    
+    width: 150px;
+    height: 240px;
+    top: 220px;
+    left: -250px;
     }
 
 /* Додаємо ефект при наведенні */
@@ -106,7 +122,8 @@ header {
 
 .container-logo {
     display: flex;
-    align-items: center;
+    align-items: self-start;
+    justify-content: left;
 }
 
 .container-logo .logo {
